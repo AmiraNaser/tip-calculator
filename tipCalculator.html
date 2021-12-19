@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=Roboto+Mono:wght@700&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background:  #F6F6F3;
+      color: #333;
+      font-family: 'Roboto Mono', monospace;
+      justify-content: center;
+      align-items: center;
+      /* text-align: center; */
+    }
+    .container {
+      background: #fff;
+      width: 41.5557vw;
+      margin: auto;
+      margin-top: 4vw;
+      padding-top: 2.976vw;
+      box-shadow: rgba(148, 146, 120, 0.23) 0px 0px 44px;
+      border-radius: 20px;
+    }
+    .tip, .total {
+      font-size: 1rem;
+      border-bottom: 1px solid #DEDEDE;
+      padding-bottom:  1.89vw;
+      margin-bottom:  1.89vw;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+    }
+    .total {
+      border-bottom: none;
+      padding-bottom:  0;
+    }
+    .tip-text, .total-text {
+      position: relative;
+      bottom: 1.3vw;
+      font-family: 'Roboto Mono', monospace;
+      font-weight: 700;
+    }
+    .dollar-sign-tip, .dollar-sign-total {
+      margin-left: 1.87vw;
+      font-size: 2.597vw;
+      position: relative;
+      bottom: 1.9vw;
+    }
+    .tip-amount, .total-amount {
+      font-size: 4.329vw;
+    }
+    .calculate-container {
+      background: #F7F7F7;
+      border-radius: 20px;
+      padding: 0;
+    }
+    .bill-container {
+      display: flex;
+      margin: 0 1.8vw;
+    }
+    .bill-amount, .number-of-people {
+      padding-left: 2vw;
+    }
+    input[type= "text"] {
+      border: none;
+      border-bottom: 3px dotted #B3B3B3;
+      background: none;
+      outline: none;
+      margin-right: .5vw;
+      font-size: 3.875rem;
+      font-family: 'Inter', sans-serif;
+      width: 100%;
+      text-align: center;
+    }
+    .bill-amount {
+      border-right: 2px solid #DEDEDE;
+      padding: 3.517vw 2.435vw 2.435vw 1.08vw;
+      width: 70%;
+    }
+    .number-of-people {
+      padding:  3.517vw 2.435vw 2.435vw;
+      width: 30%;
+    }
+    .bill-amount input[type=text] {
+      background: url('https://svgshare.com/i/cfF.svg') left 15px no-repeat;
+      background-size: 3vw;
+      padding-left: .5vw;
+      width: 100%;
+        }
+    .number-of-people input[type=text] {
+      background: url('https://svgshare.com/i/cfQ.svg') left 20px no-repeat;
+      background-size: 3vw;
+      padding-left: 2vw;
+    }
+    .bill-text, .number-text {
+      text-align: center;
+      padding-top: .5vw;
+      margin-bottom: 2.435vw;
+    }
+    .number-text {
+      margin-left: .47vw;
+    }
+    .percentage-container {
+      display: flex;
+      background: #EEEEEE;
+      color: #60C1B6;
+      border-top: 1px solid #DEDEDE;
+      border-bottom: 1px solid #DEDEDE;
+      justify-content: space-between;
+      padding: 1.08vw 1.89vw;
+    }
+
+    input[type=radio] {
+      display: none;
+    }
+    .label {
+     background: #FFFFFF;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+      width: 7.305vw;
+      height:  3.679vw;
+      border-radius: 16px;
+      box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.05);
+      font-size:  1.298vw;
+      cursor: pointer;
+    }
+    input[type=radio]:checked + .label {
+      background: #60C1B6;
+      color: #fff;
+    }
+    button {
+      margin-top: 1.5vw;
+      margin-bottom: 1.5vw;
+      margin-left: 22vw;
+      font-weight: 700;
+      padding: 1vw 5.5vw;
+      text-align: center;
+      background: #ED7861;
+      box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+      border-radius: 15px;
+      border: none;
+      color: #fff;
+      font-size:  1.298vw;
+      box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    button:hover {
+      background: #254441;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="tip">
+        <span class="tip-text">Tip Amount</span><span class="dollar-sign-tip">$</span><span class="tip-amount">4.02</span>
+      </div>
+      <div class="total">
+        <span class="total-text">Total Per Person</span><span class="dollar-sign-total">$</span><span class="total-amount">12.02</span>
+      </div>
+
+      <div class="calculate-container">
+        <div class="bill-container">
+          <div class="bill-amount">
+            <div class="bill-amount-money">
+              <input type="text" id="bill-amount-input" name="bill-amount" value="102.02" />
+            </div>
+            <div class="bill-text">
+              Bill Amount
+            </div>
+          </div>
+          <div class="number-of-people">
+            <div class="number">
+              <input type="text" id="people-number-input" name="people-number" value="25" />
+            </div>
+            <div class="number-text">
+              Number Of People
+            </div>
+          </div>
+      </div>
+
+      <div class="percentage-container">
+        <div>
+            <input type="radio" name="percent" value="5" id="five-percent" />
+            <label for="five-percent" class="label">5%</label>
+        </div>
+        <div>
+            <input type="radio" name="percent" value="10" id="ten-percent" />
+            <label for="ten-percent" class="label">10%</label>
+        </div>
+        <div>
+            <input type="radio" name="percent" value="15" id="fifteen-percent" />
+            <label for="fifteen-percent" class="label">15%</label>
+        </div>
+        <div>
+            <input type="radio" name="percent" value="20" id="twenty-percent" checked />
+            <label for="twenty-percent" class="label">20%</label>
+        </div>
+      </div>
+      <div class="calculate-container">
+        <button type="button" name="button" id="button">Calculate</button>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+
+    const tip_amount = document.querySelector('.tip-amount');
+    const total_amount = document.querySelector('.total-amount');
+    const calculate = document.getElementById('button');
+
+    calculate.addEventListener('click', () => {
+      const bill_amount = document.getElementById('bill-amount-input').value;
+      const radio_value = document.querySelector('input[name = "percent"]:checked').value;
+      const percent = (parseFloat(radio_value) / 100).toFixed(2);
+      const tip_amount_value = (parseFloat(bill_amount) * percent).toFixed(2);
+      tip_amount.innerHTML = (tip_amount_value < 10 ? '0' + tip_amount_value : tip_amount_value);
+      const people_number = document.getElementById('people-number-input').value;
+      const total = ((parseFloat(bill_amount) + parseFloat(tip_amount_value)) / parseFloat(people_number)).toFixed(2);
+
+      total_amount.innerHTML = (total< 10 ? '0' + total : total);
+    });
+
+    </script>
+  </body>
+</html>
